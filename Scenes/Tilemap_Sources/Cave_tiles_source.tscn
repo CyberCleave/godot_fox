@@ -1,0 +1,485 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/Tiles/tile_cave_bg_rock.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="tile_cave_bg_rock" type="Sprite" parent="."]
+position = Vector2( 336, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock2" type="Sprite" parent="."]
+position = Vector2( 384, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock3" type="Sprite" parent="."]
+position = Vector2( 336, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock4" type="Sprite" parent="."]
+position = Vector2( 384, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock5" type="Sprite" parent="."]
+position = Vector2( 336, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock6" type="Sprite" parent="."]
+position = Vector2( 384, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock7" type="Sprite" parent="."]
+position = Vector2( 336, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock8" type="Sprite" parent="."]
+position = Vector2( 384, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock9" type="Sprite" parent="."]
+position = Vector2( 336, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock10" type="Sprite" parent="."]
+position = Vector2( 384, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock11" type="Sprite" parent="."]
+position = Vector2( 336, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock12" type="Sprite" parent="."]
+position = Vector2( 384, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock13" type="Sprite" parent="."]
+position = Vector2( 336, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock14" type="Sprite" parent="."]
+position = Vector2( 384, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock15" type="Sprite" parent="."]
+position = Vector2( 432, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock16" type="Sprite" parent="."]
+position = Vector2( 432, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock17" type="Sprite" parent="."]
+position = Vector2( 432, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock18" type="Sprite" parent="."]
+position = Vector2( 432, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock19" type="Sprite" parent="."]
+position = Vector2( 432, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock20" type="Sprite" parent="."]
+position = Vector2( 432, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock21" type="Sprite" parent="."]
+position = Vector2( 432, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock22" type="Sprite" parent="."]
+position = Vector2( 480, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock23" type="Sprite" parent="."]
+position = Vector2( 480, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock24" type="Sprite" parent="."]
+position = Vector2( 480, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock25" type="Sprite" parent="."]
+position = Vector2( 480, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock26" type="Sprite" parent="."]
+position = Vector2( 480, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock27" type="Sprite" parent="."]
+position = Vector2( 480, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock28" type="Sprite" parent="."]
+position = Vector2( 480, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock29" type="Sprite" parent="."]
+position = Vector2( 528, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock30" type="Sprite" parent="."]
+position = Vector2( 528, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock31" type="Sprite" parent="."]
+position = Vector2( 576, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock32" type="Sprite" parent="."]
+position = Vector2( 576, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock33" type="Sprite" parent="."]
+position = Vector2( 624, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock34" type="Sprite" parent="."]
+position = Vector2( 624, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock35" type="Sprite" parent="."]
+position = Vector2( 672, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock36" type="Sprite" parent="."]
+position = Vector2( 672, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock37" type="Sprite" parent="."]
+position = Vector2( 720, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock38" type="Sprite" parent="."]
+position = Vector2( 720, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock39" type="Sprite" parent="."]
+position = Vector2( 672, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock40" type="Sprite" parent="."]
+position = Vector2( 720, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock41" type="Sprite" parent="."]
+position = Vector2( 672, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock42" type="Sprite" parent="."]
+position = Vector2( 720, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock43" type="Sprite" parent="."]
+position = Vector2( 672, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock44" type="Sprite" parent="."]
+position = Vector2( 720, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock45" type="Sprite" parent="."]
+position = Vector2( 672, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock46" type="Sprite" parent="."]
+position = Vector2( 720, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock47" type="Sprite" parent="."]
+position = Vector2( 528, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock48" type="Sprite" parent="."]
+position = Vector2( 528, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock49" type="Sprite" parent="."]
+position = Vector2( 576, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock50" type="Sprite" parent="."]
+position = Vector2( 576, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock51" type="Sprite" parent="."]
+position = Vector2( 624, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock52" type="Sprite" parent="."]
+position = Vector2( 624, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock53" type="Sprite" parent="."]
+position = Vector2( 672, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock54" type="Sprite" parent="."]
+position = Vector2( 720, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock55" type="Sprite" parent="."]
+position = Vector2( 768, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock56" type="Sprite" parent="."]
+position = Vector2( 768, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock57" type="Sprite" parent="."]
+position = Vector2( 768, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock58" type="Sprite" parent="."]
+position = Vector2( 768, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock59" type="Sprite" parent="."]
+position = Vector2( 768, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock60" type="Sprite" parent="."]
+position = Vector2( 768, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock61" type="Sprite" parent="."]
+position = Vector2( 768, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock62" type="Sprite" parent="."]
+position = Vector2( 816, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock63" type="Sprite" parent="."]
+position = Vector2( 816, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock64" type="Sprite" parent="."]
+position = Vector2( 816, 344 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 64, 32, 32 )
+
+[node name="tile_cave_bg_rock65" type="Sprite" parent="."]
+position = Vector2( 816, 392 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 96, 32, 32 )
+
+[node name="tile_cave_bg_rock66" type="Sprite" parent="."]
+position = Vector2( 816, 440 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 128, 32, 32 )
+
+[node name="tile_cave_bg_rock67" type="Sprite" parent="."]
+position = Vector2( 816, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock68" type="Sprite" parent="."]
+position = Vector2( 816, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock69" type="Sprite" parent="."]
+position = Vector2( 864, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock70" type="Sprite" parent="."]
+position = Vector2( 864, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock71" type="Sprite" parent="."]
+position = Vector2( 912, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock72" type="Sprite" parent="."]
+position = Vector2( 912, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock73" type="Sprite" parent="."]
+position = Vector2( 960, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 416, 0, 32, 32 )
+
+[node name="tile_cave_bg_rock74" type="Sprite" parent="."]
+position = Vector2( 960, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 416, 32, 32, 32 )
+
+[node name="tile_cave_bg_rock75" type="Sprite" parent="."]
+position = Vector2( 864, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock76" type="Sprite" parent="."]
+position = Vector2( 864, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock77" type="Sprite" parent="."]
+position = Vector2( 912, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock78" type="Sprite" parent="."]
+position = Vector2( 912, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 192, 32, 32 )
+
+[node name="tile_cave_bg_rock79" type="Sprite" parent="."]
+position = Vector2( 960, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 416, 160, 32, 32 )
+
+[node name="tile_cave_bg_rock80" type="Sprite" parent="."]
+position = Vector2( 960, 536 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 416, 192, 32, 32 )
