@@ -459,7 +459,7 @@ tile_data = PoolIntArray( -327562, -536870877, 0, -262033, 1073741848, 0, -26203
 [node name="ScreenShake" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 11 )]
-position = Vector2( 111.88, 594.278 )
+position = Vector2( 112, 592 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
