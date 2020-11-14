@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Tilesets/Forest_Grass.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Items/ScreenShake.tscn" type="PackedScene" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Tilesets/Tree_Dark.tres" type="TileSet" id=14]
 [ext_resource path="res://Tilesets/Forest_Leaves.tres" type="TileSet" id=15]
 [ext_resource path="res://Scenes/Interface/Interface.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scripts/Interface.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/Items/Berry.tscn" type="PackedScene" id=18]
 
 [sub_resource type="GDScript" id=1]
 
@@ -45,7 +47,10 @@
 [node name="Forest" type="Node"]
 script = SubResource( 1 )
 
-[node name="Interface" parent="." instance=ExtResource( 16 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" parent="CanvasLayer" instance=ExtResource( 16 )]
+script = ExtResource( 17 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -117,6 +122,14 @@ offset = Vector2( 0, -470 )
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Boxes" type="Node2D" parent="."]
+
+[node name="Berries" type="Node2D" parent="."]
+
+[node name="Berry" parent="Berries" instance=ExtResource( 18 )]
+position = Vector2( 304, 512 )
+
+[node name="Berry2" parent="Berries" instance=ExtResource( 18 )]
+position = Vector2( 400, 72 )
 
 [node name="World" type="Node2D" parent="."]
 
@@ -461,15 +474,11 @@ tile_data = PoolIntArray( -327562, -536870877, 0, -262033, 1073741848, 0, -26203
 [node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 112, 592 )
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-limit_left = 0
-limit_top = -256
-limit_bottom = 704
-limit_smoothed = true
-smoothing_enabled = true
-editor_draw_limits = true
+[node name="Camera2D" parent="Player" index="4"]
+zoom = Vector2( 0.8, 0.8 )
 
 [node name="Abyss" parent="." instance=ExtResource( 10 )]
 position = Vector2( 2713.83, 836.802 )
 scale = Vector2( 200, 1 )
+
+[editable path="Player"]

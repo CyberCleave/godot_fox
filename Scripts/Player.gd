@@ -10,6 +10,8 @@ const JUMP_CUT_Y = 0.5
 const JUMP_CUT_X = 0.05
 const FLOOR = Vector2(0, -1)
 const FIREBALL = preload("res://Scenes/Items/Fireball.tscn")
+const SHOT_COST = 20
+const DOUBLEJUMP_COST = 40
 
 var player_jump = false
 var can_jump = true
@@ -18,6 +20,7 @@ var can_shoot = true
 var jump_pressed = false
 var jump_count = 0
 var doublejump_limit = 2
+var power = 100
 
 var is_dead = false
 
@@ -36,25 +39,28 @@ func _physics_process(delta):
 				vel.y = JUMPFORCE
 	
 		if Input.is_action_just_pressed("player_shoot") and !is_attacking and can_shoot:
-			if is_on_floor():
-				if vel.x != 0:
-					$AnimatedSprite.play("run_attack")
+			if power >= SHOT_COST:
+				if is_on_floor():
+					if vel.x != 0:
+						$AnimatedSprite.play("run_attack")
+					else:
+						$AnimatedSprite.play("attack")
 				else:
-					$AnimatedSprite.play("attack")
+					$AnimatedSprite.play("air_attack")
+				is_attacking = true
+				can_shoot = false
+				shootTimer()
+				power -= SHOT_COST
+				var fireball = FIREBALL.instance()
+				if sign($Position2D.position.x) == 1:
+					fireball.set_fireball_direction(1)
+				else:
+					fireball.set_fireball_direction(-1)
+				get_parent().add_child(fireball)
+				fireball.position = $Position2D.global_position
+				fireball.StartPosX = $Position2D.global_position.x
 			else:
-				$AnimatedSprite.play("air_attack")
-			is_attacking = true
-			can_shoot = false
-			shootTimer()
-			var fireball = FIREBALL.instance()
-			if sign($Position2D.position.x) == 1:
-				fireball.set_fireball_direction(1)
-			else:
-				fireball.set_fireball_direction(-1)
-			get_parent().add_child(fireball)
-			fireball.position = $Position2D.global_position
-			fireball.StartPosX = $Position2D.global_position.x
-			
+				print ("LOW POWER!")
 	
 		if Input.is_action_pressed("ui_left"):
 			$AnimatedSprite.flip_h = true
@@ -112,9 +118,13 @@ func _physics_process(delta):
 					if Input.is_action_just_pressed("player_jump"):
 							if jump_count > 0 && jump_count < doublejump_limit:
 								if vel.y < -JUMPFORCE / 2 - GRAVITY * delta:
-									vel.y = JUMPFORCE
-									jump_count += 1
-									print("DOUBLE JUMP!")
+									if power >= DOUBLEJUMP_COST:
+										vel.y = JUMPFORCE
+										jump_count += 1
+										power -= DOUBLEJUMP_COST
+										print("DOUBLE JUMP!")
+									else:
+										print("LOW POWER!")
 								else:
 									print("TOO LATE!")
 							else:
@@ -137,7 +147,6 @@ func _physics_process(delta):
 	vel.y += GRAVITY * delta
 		
 	vel = move_and_slide(vel, FLOOR)
-		
 		
 func spring():
 	vel.y += JUMPFORCE

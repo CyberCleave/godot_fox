@@ -5,4 +5,6 @@ func _ready():
 
 func _on_Berry_body_entered(body):
 	if "Player" in body.name:
-		queue_free()
+		if body.power < 100:
+			body.power = 100
+			queue_free()

@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=2 format=2]
 
-[ext_resource path="res://Scenes/Interface/theme/font/default_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Interface/font.tres" type="DynamicFont" id=1]
 
 [resource]
 default_font = ExtResource( 1 )
-Label/colors/font_color = Color( 1, 1, 1, 1 )
-Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_color = Color( 0.933333, 0.901961, 0.0784314, 1 )
+Label/colors/font_color_shadow = Color( 1, 1, 1, 0 )
 Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 Label/constants/line_spacing = 3
 Label/constants/shadow_as_outline = 0
