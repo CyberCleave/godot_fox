@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+signal power_updated(power)
 
 const SPEED = 250.0
 const MAXSPEED = 500.0
@@ -19,12 +20,17 @@ var is_attacking = false
 var can_shoot = true
 var jump_pressed = false
 var jump_count = 0
+
 var doublejump_limit = 2
-var power = 100
+var max_power = 100
+onready var power = max_power setget _set_power
 
 var is_dead = false
 
 var vel = Vector2()
+
+func _ready():
+	emit_signal("power_updated", power)
 
 func _physics_process(delta):
 	
@@ -50,7 +56,7 @@ func _physics_process(delta):
 				is_attacking = true
 				can_shoot = false
 				shootTimer()
-				power -= SHOT_COST
+				drain_power(SHOT_COST)
 				var fireball = FIREBALL.instance()
 				if sign($Position2D.position.x) == 1:
 					fireball.set_fireball_direction(1)
@@ -121,7 +127,7 @@ func _physics_process(delta):
 									if power >= DOUBLEJUMP_COST:
 										vel.y = JUMPFORCE
 										jump_count += 1
-										power -= DOUBLEJUMP_COST
+										drain_power(DOUBLEJUMP_COST)
 										print("DOUBLE JUMP!")
 									else:
 										print("LOW POWER!")
@@ -173,10 +179,19 @@ func shootTimer():
 	can_shoot = true
 	
 func jump_timer():
-	yield(get_tree().create_timer(.1), "timeout")
+	yield(get_tree().create_timer(.2), "timeout")
 	jump_pressed = false
 
 func _on_Timer_timeout():
 	var error_code = get_tree().change_scene("res://Scenes/Menus/TitleScreen.tscn")
 	if error_code != 0:
 		print("ERROR: ", error_code)
+		
+func drain_power(amount):
+	_set_power(power - amount)
+		
+func _set_power(value):
+	var prev_power = power
+	power = clamp(value, 0, max_power)
+	if power != prev_power:
+		emit_signal("power_updated", power)

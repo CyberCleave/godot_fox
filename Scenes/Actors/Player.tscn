@@ -44,51 +44,51 @@ region = Rect2( 112, 320, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 400, 56, 80 )
+region = Rect2( 112, 160, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 1 )
-region = Rect2( 56, 400, 56, 80 )
+region = Rect2( 0, 480, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 1 )
-region = Rect2( 112, 400, 56, 80 )
+region = Rect2( 56, 480, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 160, 56, 80 )
+region = Rect2( 112, 480, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 1 )
-region = Rect2( 56, 160, 56, 80 )
+region = Rect2( 0, 80, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 80, 56, 80 )
+region = Rect2( 56, 80, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 1 )
-region = Rect2( 56, 80, 56, 80 )
+region = Rect2( 112, 80, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 1 )
-region = Rect2( 112, 80, 56, 80 )
+region = Rect2( 0, 160, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 480, 56, 80 )
+region = Rect2( 56, 160, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 1 )
-region = Rect2( 56, 480, 56, 80 )
+region = Rect2( 0, 400, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 1 )
-region = Rect2( 112, 480, 56, 80 )
+region = Rect2( 56, 400, 56, 80 )
 
 [sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 1 )
-region = Rect2( 112, 160, 56, 80 )
+region = Rect2( 112, 400, 56, 80 )
 
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
@@ -107,30 +107,30 @@ animations = [ {
 "name": "attack",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ SubResource( 11 ) ],
 "loop": false,
-"name": "run_attack",
-"speed": 12.0
+"name": "fall",
+"speed": 0.0
 }, {
-"frames": [ SubResource( 14 ), SubResource( 15 ) ],
-"loop": false,
-"name": "jump",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
-"loop": true,
-"name": "run",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": false,
 "name": "air_attack",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 22 ) ],
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ) ],
 "loop": false,
-"name": "fall",
-"speed": 0.0
+"name": "jump",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": false,
+"name": "run_attack",
+"speed": 12.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-645c92eff4d0099c6aa51420b4b3da7f.stex"
+path="res://.import/bg.png-2e72a8fba7d42f1024de38889a99a95d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/interface/bar/energy_bar/bg.png"
-dest_files=[ "res://.import/bg.png-645c92eff4d0099c6aa51420b4b3da7f.stex" ]
+source_file="res://Sprites/UI/interface/bar/bg.png"
+dest_files=[ "res://.import/bg.png-2e72a8fba7d42f1024de38889a99a95d.stex" ]
 
 [params]
 

@@ -6,7 +6,7 @@ func _ready():
 	pass
 	
 func move_camera(vector):
-	get_parent().get_node("Player").get_node("Camera2D").offset = Vector2(rand_range(-vector.x, vector.x), rand_range(-vector.y, vector.y))
+	get_node("/root/Game/Player/Camera2D").offset = Vector2(rand_range(-vector.x, vector.x), rand_range(-vector.y, vector.y))
 	
 func screen_shake(shake_length, shake_power, shake_priority):
 	if shake_priority > current_shake_priority:
