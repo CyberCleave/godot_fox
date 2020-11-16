@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 signal power_updated(power)
 
-const SPEED = 250.0
+const SPEED = 200.0
 const MAXSPEED = 500.0
 const ACCELERATION = 0.05
 const JUMPFORCE = -750.0
