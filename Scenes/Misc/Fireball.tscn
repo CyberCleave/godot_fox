@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/Fireball.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/FX/fireball1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/FX/fireball1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Fireball.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/FX/fireball2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/FX/fireball3.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "shoot",
 "speed": 10.0
@@ -20,7 +20,7 @@ extents = Vector2( 20.7609, 8.40282 )
 z_index = 5
 collision_layer = 16
 collision_mask = 10
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

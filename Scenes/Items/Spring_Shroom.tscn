@@ -43,5 +43,6 @@ one_way_collision = true
 position = Vector2( 0.561867, 2.02153 )
 frames = SubResource( 3 )
 animation = "idle"
+frame = 1
 playing = true
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
