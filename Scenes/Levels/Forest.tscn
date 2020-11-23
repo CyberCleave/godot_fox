@@ -468,6 +468,6 @@ position = Vector2( 2713.83, 836.802 )
 scale = Vector2( 200, 1 )
 
 [node name="player_spawner" parent="." instance=ExtResource( 11 )]
-position = Vector2( 112, 599 )
+position = Vector2( 112, 600 )
 
 [node name="ScreenShake" parent="." instance=ExtResource( 2 )]

@@ -14,7 +14,7 @@ const FLOOR = Vector2(0, -1)
 const FIREBALL = preload("res://Scenes/Misc/Fireball.tscn")
 const SHOT_COST = 20
 const DOUBLEJUMP_COST = 40
-const HIT_COST = 60
+const HIT_COST = 1
 
 var player_jump = false
 var can_jump = true
@@ -29,7 +29,7 @@ var doublejump_limit = 2
 var max_lives = 99
 var max_power = 100
 onready var power = max_power setget _set_power
-onready var lives = 3 setget _set_lives
+onready var lives = 99 setget _set_lives
 
 var is_dead = false
 
@@ -153,8 +153,8 @@ func _physics_process(delta):
 				for i in range(get_slide_count()):
 					if "Enemy" in get_slide_collision(i).collider.name:
 						get_slide_collision(i).collider.attack()
-						if (!being_hit):
-							hit()
+						var attacker_position_x = get_slide_collision(i).collider.global_position.x
+						hit(attacker_position_x)
 					if "Spring_Shroom" in get_slide_collision(i).collider.name:
 						get_slide_collision(i).collider.spring()
 						spring()
@@ -167,13 +167,17 @@ func _physics_process(delta):
 func spring():
 	vel.y += JUMPFORCE
 	
-func hit():
-	print("BEING HIT!")
+func hit(attacker_position_x):
 	if power >= HIT_COST:
 		being_hit = true
-		if vel.x >= 0:
+		$AnimatedSprite.play("hit")
+		if attacker_position_x >= global_position.x:
+			print("enemy to the right")
 			vel.x = -SPEED
-			vel.y = JUMPFORCE / 2
+		else:
+			print("enemy to the LEFT")
+			vel.x = SPEED
+		vel.y = JUMPFORCE / 2
 		drain_power(HIT_COST)
 		yield(get_tree().create_timer(.3), "timeout")
 		being_hit = false
@@ -181,11 +185,13 @@ func hit():
 		dead()
 		
 func dead():
+	print("DEAD")
 	set_collision_mask(8)
 	yield(get_tree().create_timer(.2), "timeout")
 	set_collision_layer(0)
 	vel = Vector2(0, 0)
 	is_dead = true
+	being_hit = false
 	$AnimatedSprite.play("dead")
 	$Timer.start()
 	
@@ -204,7 +210,7 @@ func shootTimer():
 func jump_timer():
 	yield(get_tree().create_timer(.2), "timeout")
 	jump_pressed = false
-
+	
 func _on_Timer_timeout():
 	loss_lives(1)
 	if lives > 0:
@@ -233,7 +239,9 @@ func _set_lives(value):
 		emit_signal("lives_updated", lives)
 		
 func respawn():
-	is_dead = false
+	set_position(Vector2( 0, 0 ))
+	$AnimatedSprite.play("idle")
+	yield(get_tree().create_timer(.2), "timeout")
 	set_collision_mask(15)
 	set_collision_layer(1)
-	global_position = get_parent().global_position
+	is_dead = false
