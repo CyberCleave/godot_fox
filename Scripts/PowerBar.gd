@@ -1,14 +1,20 @@
 extends Control
 
+onready var life_counter = $LifeCounter/Label
 onready var power_bar_under = $PowerBar/Bar_under
 onready var power_bar_over = $PowerBar/Bar_over
 onready var update_tween = $PowerBar/UpdateTween
+
 
 export (Color) var good_color = Color.green
 export (Color) var caution_color = Color.yellow
 export (Color) var bad_color = Color.red
 export (float, 0, 1, 0.05) var caution_zone = 0.5
 export (float, 0, 1, 0.05) var bad_zone = 0.3
+
+
+func _on_lives_updated(lives):
+	life_counter.text = str(lives)
 
 func _on_power_updated(power):
 	power_bar_over.value = power
