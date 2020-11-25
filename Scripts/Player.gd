@@ -22,6 +22,7 @@ var is_attacking = false
 var can_shoot = true
 var jump_pressed = false
 var being_hit = false
+var invulnerable = false
 var jump_count = 0
 
 var doublejump_limit = 2
@@ -152,9 +153,10 @@ func _physics_process(delta):
 			if get_slide_count() > 0:
 				for i in range(get_slide_count()):
 					if "Enemy" in get_slide_collision(i).collider.name:
-						get_slide_collision(i).collider.attack()
-						var attacker_position_x = get_slide_collision(i).collider.global_position.x
-						hit(attacker_position_x)
+						if (!invulnerable):
+							get_slide_collision(i).collider.attack()
+							var attacker_position_x = get_slide_collision(i).collider.global_position.x
+							hit(attacker_position_x)
 					if "Spring_Shroom" in get_slide_collision(i).collider.name:
 						get_slide_collision(i).collider.spring()
 						spring()
@@ -172,20 +174,20 @@ func hit(attacker_position_x):
 		being_hit = true
 		$AnimatedSprite.play("hit")
 		if attacker_position_x >= global_position.x:
-			print("enemy to the right")
 			vel.x = -SPEED
 		else:
-			print("enemy to the LEFT")
 			vel.x = SPEED
 		vel.y = JUMPFORCE / 2
 		drain_power(HIT_COST)
+		invulnerable = true
+		$AnimationPlayer.play("invul")
+		invul_timer()
 		yield(get_tree().create_timer(.3), "timeout")
 		being_hit = false
 	else:
 		dead()
 		
 func dead():
-	print("DEAD")
 	set_collision_mask(8)
 	yield(get_tree().create_timer(.2), "timeout")
 	set_collision_layer(0)
@@ -202,6 +204,12 @@ func coyoteTime():
 	
 func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
+	
+func invul_timer():
+	yield(get_tree().create_timer(1.2), "timeout")
+	$AnimationPlayer.play("restore")
+	yield(get_tree().create_timer(.3), "timeout")
+	invulnerable = false
 	
 func shootTimer():
 	yield(get_tree().create_timer(.5), "timeout")
