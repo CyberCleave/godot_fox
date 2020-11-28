@@ -224,7 +224,5 @@ editor_draw_limits = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Interface" parent="CanvasLayer" instance=ExtResource( 3 )]
-[connection signal="lives_updated" from="." to="CanvasLayer/Interface" method="_on_lives_updated"]
-[connection signal="power_updated" from="." to="CanvasLayer/Interface" method="_on_power_updated"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

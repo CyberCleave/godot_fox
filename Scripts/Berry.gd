@@ -5,6 +5,6 @@ func _ready():
 
 func _on_Berry_body_entered(body):
 	if "Player" in body.name:
-		if body.power < body.max_power:
-			body._set_power(body.max_power)
+		if PlayerData.power < PlayerData.max_power:
+			PlayerData._set_power(PlayerData.max_power)
 			queue_free()

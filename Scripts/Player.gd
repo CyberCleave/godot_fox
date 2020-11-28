@@ -1,8 +1,5 @@
 extends KinematicBody2D
 
-signal power_updated(power)
-signal lives_updated(lives)
-
 const SPEED = 200.0
 const MAXSPEED = 500.0
 const ACCELERATION = 0.05
@@ -14,7 +11,7 @@ const FLOOR = Vector2(0, -1)
 const FIREBALL = preload("res://Scenes/Misc/Fireball.tscn")
 const SHOT_COST = 20
 const DOUBLEJUMP_COST = 40
-const HIT_COST = 1
+const HIT_COST = 60
 
 var player_jump = false
 var can_jump = true
@@ -27,18 +24,12 @@ var jump_count = 0
 
 var doublejump_limit = 2
 
-var max_lives = 99
-var max_power = 100
-onready var power = max_power setget _set_power
-onready var lives = 99 setget _set_lives
-
 var is_dead = false
 
 var vel = Vector2()
 
 func _ready():
-	emit_signal("power_updated", power)
-	emit_signal("lives_updated", lives)
+	pass
 
 func _physics_process(delta):
 	
@@ -55,7 +46,7 @@ func _physics_process(delta):
 		if (!being_hit):
 	
 			if Input.is_action_just_pressed("player_shoot") and !is_attacking and can_shoot:
-				if power >= SHOT_COST:
+				if PlayerData.power >= SHOT_COST:
 					if is_on_floor():
 						if vel.x != 0:
 							$AnimatedSprite.play("run_attack")
@@ -134,7 +125,7 @@ func _physics_process(delta):
 						if Input.is_action_just_pressed("player_jump"):
 								if jump_count > 0 && jump_count < doublejump_limit:
 									if vel.y < -JUMPFORCE / 2 - GRAVITY * delta:
-										if power >= DOUBLEJUMP_COST:
+										if PlayerData.power >= DOUBLEJUMP_COST:
 											vel.y = JUMPFORCE
 											jump_count += 1
 											drain_power(DOUBLEJUMP_COST)
@@ -170,7 +161,7 @@ func spring():
 	vel.y += JUMPFORCE
 	
 func hit(attacker_position_x):
-	if power >= HIT_COST:
+	if PlayerData.power >= HIT_COST:
 		being_hit = true
 		$AnimatedSprite.play("hit")
 		if attacker_position_x >= global_position.x:
@@ -181,6 +172,7 @@ func hit(attacker_position_x):
 		drain_power(HIT_COST)
 		invulnerable = true
 		$AnimationPlayer.play("invul")
+		set_collision_mask(8)
 		invul_timer()
 		yield(get_tree().create_timer(.3), "timeout")
 		being_hit = false
@@ -209,6 +201,7 @@ func invul_timer():
 	yield(get_tree().create_timer(1.2), "timeout")
 	$AnimationPlayer.play("restore")
 	yield(get_tree().create_timer(.3), "timeout")
+	set_collision_mask(15)
 	invulnerable = false
 	
 func shootTimer():
@@ -221,7 +214,7 @@ func jump_timer():
 	
 func _on_Timer_timeout():
 	loss_lives(1)
-	if lives > 0:
+	if PlayerData.lives > 0:
 		respawn()
 	else:
 		var error_code = get_tree().change_scene("res://Scenes/Menus/TitleScreen.tscn")
@@ -229,23 +222,11 @@ func _on_Timer_timeout():
 			print("ERROR: ", error_code)
 		
 func drain_power(amount):
-	_set_power(power - amount)
+	PlayerData._set_power(PlayerData.power - amount)
 	
 func loss_lives(amount):
-	_set_lives(lives - amount)
-		
-func _set_power(value):
-	var prev_power = power
-	power = clamp(value, 0, max_power)
-	if power != prev_power:
-		emit_signal("power_updated", power)
-		
-func _set_lives(value):
-	var prev_lives = lives
-	lives = clamp(value, 0, max_lives)
-	if lives != prev_lives:
-		emit_signal("lives_updated", lives)
-		
+	PlayerData._set_lives(PlayerData.lives - amount)
+				
 func respawn():
 	set_position(Vector2( 0, 0 ))
 	$AnimatedSprite.play("idle")

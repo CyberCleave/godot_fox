@@ -12,16 +12,23 @@ export (Color) var bad_color = Color.red
 export (float, 0, 1, 0.05) var caution_zone = 0.5
 export (float, 0, 1, 0.05) var bad_zone = 0.3
 
+func _ready():
+	var err = PlayerData.connect("updated", self, "update_interface")
+	if err != OK:
+		print(err)
 
-func _on_lives_updated(lives):
-	life_counter.text = str(lives)
+	
+	update_interface()
 
-func _on_power_updated(power):
-	power_bar_over.value = power
-	update_tween.interpolate_property(power_bar_under, "value", power_bar_under.value, power, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+func update_interface():
+	
+	life_counter.text = str(PlayerData.lives)
+	
+	power_bar_over.value = PlayerData.power
+	update_tween.interpolate_property(power_bar_under, "value", power_bar_under.value, PlayerData.power, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	update_tween.start()
 	
-	_assign_color(power)
+	_assign_color(PlayerData.power)
 	
 func _assign_color(power):
 	if power < power_bar_over.max_value * bad_zone:

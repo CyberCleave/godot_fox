@@ -17,15 +17,17 @@ _global_script_class_icons={
 
 config/name="Platformer"
 run/main_scene="res://Scenes/Levels/Forest.tscn"
+config/use_custom_user_dir=true
 config/icon="res://icon.png"
+
+[autoload]
+
+PlayerData="*res://Scenes/Misc/player_data.tscn"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/size/borderless=true
-window/size/fullscreen=true
-window/size/always_on_top=true
+window/size/width=960
+window/size/height=540
 window/stretch/mode="2d"
 window/stretch/aspect="keep_height"
 
@@ -76,3 +78,4 @@ quality/directional_shadow/size=2048
 quality/directional_shadow/size.mobile=1024
 quality/shadow_atlas/size=2048
 quality/shadow_atlas/size.mobile=1024
+batching/precision/uv_contract=true
