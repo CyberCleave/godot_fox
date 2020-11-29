@@ -228,6 +228,10 @@ func loss_lives(amount):
 	PlayerData._set_lives(PlayerData.lives - amount)
 				
 func respawn():
+	invulnerable = true
+	$AnimationPlayer.play("invul")
+	set_collision_mask(8)
+	invul_timer()
 	set_position(Vector2( 0, 0 ))
 	$AnimatedSprite.play("idle")
 	yield(get_tree().create_timer(.2), "timeout")

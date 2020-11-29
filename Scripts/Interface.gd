@@ -17,7 +17,6 @@ func _ready():
 	if err != OK:
 		print(err)
 
-	
 	update_interface()
 
 func update_interface():
