@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/UI/0123456789.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Score_Counter.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 41, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 82, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 123, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 164, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 205, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 246, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 287, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 328, 0, 41, 54 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 369, 0, 41, 54 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "0-9",
+"speed": 5.0
+} ]
+
+[node name="Score_Counter" type="Control"]
+anchor_right = 0.046
+anchor_bottom = 0.051
+margin_right = -2.32
+margin_bottom = -1.08
+rect_min_size = Vector2( 86, 54 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -27.0
+margin_right = 86.0
+margin_bottom = 27.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dozens_Control" type="Control" parent="HBoxContainer"]
+margin_right = 41.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 41, 54 )
+
+[node name="Dozens" type="AnimatedSprite" parent="HBoxContainer/Dozens_Control"]
+frames = SubResource( 11 )
+animation = "0-9"
+centered = false
+
+[node name="Units_Control" type="Control" parent="HBoxContainer"]
+margin_left = 45.0
+margin_right = 86.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 41, 54 )
+size_flags_vertical = 3
+
+[node name="Units" type="AnimatedSprite" parent="HBoxContainer/Units_Control"]
+frames = SubResource( 11 )
+animation = "0-9"
+centered = false

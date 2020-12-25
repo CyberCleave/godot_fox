@@ -36,11 +36,8 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_Cent"]
-position = Vector2( 240, 112 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom_Cent/StaticBody2D"]
-visible = false
-position = Vector2( -240, -112 )
 shape = SubResource( 1 )
 
 [node name="Bottom_cor_L" type="Sprite" parent="."]
@@ -53,7 +50,6 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_cor_L"]
-visible = false
 position = Vector2( 240, 112 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom_cor_L/StaticBody2D"]
@@ -70,10 +66,8 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_mid"]
-position = Vector2( 240, 112 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom_mid/StaticBody2D"]
-position = Vector2( -240, -112 )
 shape = SubResource( 1 )
 
 [node name="Bottom_cor_R" type="Sprite" parent="."]
@@ -86,10 +80,8 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_cor_R"]
-position = Vector2( 240, 112 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom_cor_R/StaticBody2D"]
-position = Vector2( -240, -112 )
 shape = SubResource( 1 )
 
 [node name="Bottom_Slope_Down_1" type="Sprite" parent="."]
@@ -102,11 +94,9 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_Slope_Down_1"]
-position = Vector2( 240, 112 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bottom_Slope_Down_1/StaticBody2D"]
-position = Vector2( -240, -112 )
-polygon = PoolVector2Array( 16, -16, 16, -16, -16, -16, -16, -16, 16, 0 )
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 0 )
 
 [node name="Bottom_Slope_Down_2" type="Sprite" parent="."]
 position = Vector2( -240, -64 )
@@ -118,10 +108,8 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_Slope_Down_2"]
-position = Vector2( 240, 112 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bottom_Slope_Down_2/StaticBody2D"]
-position = Vector2( -240, -112 )
 polygon = PoolVector2Array( 16, -16, -16, -16, -16, 0, 16, 16 )
 
 [node name="Bottom_Slope_Up_1" type="Sprite" parent="."]
@@ -134,11 +122,10 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_Slope_Up_1"]
-position = Vector2( 240, 112 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bottom_Slope_Up_1/StaticBody2D"]
-position = Vector2( -288, -112 )
-polygon = PoolVector2Array( -16, -16, -16, 16, 16, 0, 16, -16 )
+position = Vector2( 0.0608215, 0.025116 )
+polygon = PoolVector2Array( -16.0608, -16.0251, -16, 0, 16, -16 )
 
 [node name="Bottom_Slope_Up_2" type="Sprite" parent="."]
 position = Vector2( -192, -64 )
@@ -150,11 +137,10 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bottom_Slope_Up_2"]
-position = Vector2( 240, 112 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bottom_Slope_Up_2/StaticBody2D"]
-position = Vector2( -192, -112 )
-polygon = PoolVector2Array( -16, -16, -16, 0, 16, -16 )
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bottom_Slope_Up_2/StaticBody2D"]
+position = Vector2( 0.50116, 0.406097 )
+polygon = PoolVector2Array( -16.5012, -16.4061, -16.5012, 15.5939, 16, 0, 15.4988, -16.4061 )
 
 [node name="Grass_cor_L" type="Sprite" parent="."]
 position = Vector2( -32, -112 )
