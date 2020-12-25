@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground.png-e26dcb18a8400f29e5fe53da98759f99.stex"
+path="res://.import/Tree_1.png-4f5ca38e95a80b2d8ad2997b02d787b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/BGs/Forest/Ground.png"
-dest_files=[ "res://.import/Ground.png-e26dcb18a8400f29e5fe53da98759f99.stex" ]
+source_file="res://Sprites/Platforms/Tree_1.png"
+dest_files=[ "res://.import/Tree_1.png-4f5ca38e95a80b2d8ad2997b02d787b0.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -7,6 +7,5 @@ func _ready():
 	
 func _on_cave_door_body_entered(body):
 	if "Player" in body.name:
-		var err = get_tree().change_scene(target_stage)
-		if err != OK:
-			print(err)
+		body.enter_door()
+		SceneChanger.change_scene(target_stage)

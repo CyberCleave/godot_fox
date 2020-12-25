@@ -22,7 +22,7 @@ extents = Vector2( 16, 16 )
 extents = Vector2( 8.63519, 12.102 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 16, 0, -16, -16, -16, -16, 16, -16, 16, -16 )
+points = PoolVector2Array( -16, -16, 16, -16, 16, 0 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 16, 16 )
@@ -31,10 +31,10 @@ extents = Vector2( 16, 16 )
 points = PoolVector2Array( 16, 16, -16, 0, -16, -16, 16, -16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 16, -16, 16, 0, -16, 16, -16, -16 )
+points = PoolVector2Array( 16, -16, -16, 0, -16.0608, -16.0251 )
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 16, 16 )
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 15.4988, -16.4061, 16, 0, -16.5012, 15.5939, -16.5012, -16.4061 )
 
 [resource]
 0/name = "Bottom_Cent"
@@ -171,8 +171,8 @@ extents = Vector2( 16, 16 )
 6/tile_mode = 0
 6/occluder_offset = Vector2( 16, 16 )
 6/navigation_offset = Vector2( 16, 16 )
-6/shape_offset = Vector2( -32, 16 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, -32, 16 )
+6/shape_offset = Vector2( 16.0608, 16.0251 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 16.0608, 16.0251 )
 6/shape = SubResource( 9 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
@@ -181,7 +181,7 @@ extents = Vector2( 16, 16 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 9 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, -32, 16 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.0608, 16.0251 )
 } ]
 6/z_index = 0
 7/name = "Bottom_Slope_Up_2"
@@ -192,8 +192,8 @@ extents = Vector2( 16, 16 )
 7/tile_mode = 0
 7/occluder_offset = Vector2( 16, 16 )
 7/navigation_offset = Vector2( 16, 16 )
-7/shape_offset = Vector2( 64, 16 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 64, 16 )
+7/shape_offset = Vector2( 16.5012, 16.4061 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 16.5012, 16.4061 )
 7/shape = SubResource( 10 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
@@ -202,7 +202,7 @@ extents = Vector2( 16, 16 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 10 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 64, 16 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.5012, 16.4061 )
 } ]
 7/z_index = 0
 8/name = "Grass_cor_L"

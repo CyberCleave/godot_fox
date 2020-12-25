@@ -34,6 +34,7 @@ func dead():
 		vel.x = 0
 	else:
 		is_dead = true
+		Global.enemy_down()
 		$CollisionShape2D.queue_free()
 		vel = Vector2(0, 0)
 		$AnimatedSprite.play("dead")
