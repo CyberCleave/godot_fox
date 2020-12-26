@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/UI/Cartoon_Forest_BG_02.png" type="Texture" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://Sprites/UI/Continue_Inactive.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/UI/Load_Active.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/UI/Continue_Active.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/UI/Ground.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/BGs/Forest/BG_Decor.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/BGs/Forest/Sky.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/BGs/Forest/Middle_Decor.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/BGs/Forest/Foreground.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/Title_Background.gd" type="Script" id=17]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -20,7 +26,50 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource( 17 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 14 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource( 13 )
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource( 15 )
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+texture = ExtResource( 16 )
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+texture = ExtResource( 12 )
+centered = false
+
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
