@@ -70,6 +70,7 @@ margin_left = 128.0
 margin_top = -348.0
 margin_right = 704.0
 margin_bottom = 356.0
+focus_mode = 0
 max_text_lines = 3
 fixed_column_width = 500
 icon_mode = 0
