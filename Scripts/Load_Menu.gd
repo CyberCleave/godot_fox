@@ -24,7 +24,9 @@ func _on_FilesList_item_activated(index):
 	
 func show_info(data):
 	info.clear()
-	info.add_item(str(data))
+	info.add_item("Level:" + str(data.level), null, false)
+	info.add_item("Lives:" + str(data.lives), null, false)
+	info.add_item("Power:" + str(data.power) + "/" + str(data.max_power), null, false)
 
 
 

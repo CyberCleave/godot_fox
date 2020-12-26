@@ -148,7 +148,7 @@ func load_game(path_to_load):
 			file.close()
 			
 			power = player_data.power
-			max_power = player_data.power
+			max_power = player_data.max_power
 			lives = player_data.lives
 			level = player_data.level
 			global_berries = player_data.global_berries
