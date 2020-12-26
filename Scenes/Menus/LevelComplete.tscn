@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/UI/cartoon_wood.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/UI/Ground.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/UI/Forest_Top.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Platforms/Pad_04_1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Platforms/Shrooms_Platform.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Platforms/Tree_1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/UI/Level_Complete_100.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/UI/Berries_Gathered.png" type="Texture" id=8]
@@ -86,21 +86,22 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -600.0
+margin_left = -632.0
 margin_top = -296.0
-margin_right = -384.0
-margin_bottom = -214.0
-rect_scale = Vector2( 3, 3 )
+margin_right = -168.0
+margin_bottom = -120.0
+rect_scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Background/TreeStump"]
-position = Vector2( 112, -29 )
+position = Vector2( 245.333, -90.6667 )
+scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 animation = "idle"
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
