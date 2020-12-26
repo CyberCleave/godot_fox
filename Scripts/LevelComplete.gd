@@ -3,6 +3,7 @@ extends Control
 onready var berries_counter = $VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer2/Berries_Counter
 onready var enemies_counter = $VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer2/Enemies_Counter
 onready var secrets_counter = $VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer2/Secrets_Counter
+onready var hint = $Hint
 
 func _ready():
 
@@ -16,3 +17,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("player_jump"):
 		Global.save_game()
 		SceneChanger.next_level()
+
+
+func _on_Timer_timeout():
+	hint.visible = true

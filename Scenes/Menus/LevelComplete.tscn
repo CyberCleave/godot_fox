@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Sprites/Player/kit_from_firefox.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/UI/cartoon_wood.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Sprites/UI/Secrets_Discovered.png" type="Texture" id=10]
 [ext_resource path="res://Scripts/LevelComplete.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/Menus/Score_Counter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprites/UI/Complete_Hint.png" type="Texture" id=13]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -206,3 +207,24 @@ anchor_bottom = 0.0
 margin_top = 228.0
 margin_right = 86.0
 margin_bottom = 282.0
+
+[node name="Hint" type="TextureRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -557.0
+margin_top = -120.0
+margin_right = 557.0
+margin_bottom = -65.9999
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Hint"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Hint/Timer" to="." method="_on_Timer_timeout"]

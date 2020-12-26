@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Platformer"
+config/name="The Last Tree"
 run/main_scene="res://Scenes/Menus/TitleScreen.tscn"
 config/use_custom_user_dir=true
 config/icon="res://icon.png"

@@ -2,6 +2,7 @@ extends Control
 
 onready var list = $FilesList
 onready var info = $InfoList
+onready var hint = $Hint
 
 func _ready():
 	
@@ -27,8 +28,12 @@ func show_info(data):
 	info.add_item("Level:" + str(data.level), null, false)
 	info.add_item("Lives:" + str(data.lives), null, false)
 	info.add_item("Power:" + str(data.power) + "/" + str(data.max_power), null, false)
+	
+func _physics_process(_delta):
+	if Input.is_action_pressed("player_shoot"):
+		var err = get_tree().change_scene("res://Scenes/Menus/TitleScreen.tscn")
+		if err != OK:
+			print(err)
 
-
-
-
-
+func _on_Timer_timeout():
+	hint.visible = true
