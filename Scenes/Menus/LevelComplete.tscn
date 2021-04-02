@@ -17,17 +17,17 @@
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 179, 256 )
+region = Rect2( 0, 0, 224, 320 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 179, 0, 179, 256 )
+region = Rect2( 224, 0, 224, 320 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 358, 0, 179, 256 )
+region = Rect2( 448, 0, 224, 320 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -100,9 +100,10 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Background/TreeStump"]
-position = Vector2( 245.333, -90.6667 )
+position = Vector2( 245.333, -128 )
 frames = SubResource( 4 )
 animation = "idle"
+frame = 1
 playing = true
 flip_h = true
 

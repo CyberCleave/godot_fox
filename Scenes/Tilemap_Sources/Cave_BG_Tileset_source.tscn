@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Tiles/tile_cave_bg_rock.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/BGs/Cave/bg_cave.png" type="Texture" id=2]
+
+[node name="Cave_BG_Tileset" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 192, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 64 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 192, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 128, 96 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 192, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 160, 128, 64 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 368, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 96, 64 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 368, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 160, 96, 64 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 576, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 0, 128, 64 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 576, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 64, 128, 96 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 576, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 160, 128, 64 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 768, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 0, 96, 64 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 752, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 160, 96, 64 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 928, -16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 64, 96 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 1056, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 64, 64, 96 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( 928, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 64, 64, 96 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( 920, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 224, 32, 32 )
