@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Tilesets/Forest_Grass.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/BGs/Forest/Sky.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/Misc/player_spawner.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Items/Berry.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Misc/cave_door.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Sprites/UI/hint.png" type="Texture" id=20]
 
 [sub_resource type="TileSet" id=1]
 0/name = "obj_wallshroom.png 0"
@@ -490,3 +491,7 @@ modulate = Color( 0.254902, 0.160784, 0.25098, 1 )
 position = Vector2( 815.893, 602.892 )
 z_index = 3
 target_stage = "res://Scenes/Menus/LevelComplete.tscn"
+
+[node name="hint" type="Sprite" parent="."]
+position = Vector2( 155.188, 497.229 )
+texture = ExtResource( 20 )
